@@ -11,14 +11,13 @@
 </head>
 
 <body>
-    <form>
+    <form hx-post="http://localhost:3000/todo" hx-target="#todo-list">
         <label for="newTodo">New Todo:</label>
         <input type="text" name="newTodo" id="newTodo" />
         <button type="submit">Submit</button>
     </form>
 
-    <ol id="todo-list"></ol>
-
+    <ol id="todo-list" hx-get="http://localhost:3000/todo" hx-trigger="load"></ol>
 </body>
 
 </html>
